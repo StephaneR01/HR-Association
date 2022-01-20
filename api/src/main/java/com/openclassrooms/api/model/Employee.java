@@ -7,9 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 @Entity
 @Table(name = "employees")  
 public class Employee {
@@ -27,5 +27,36 @@ public class Employee {
 	private String mail;
 	
 	private String password;
+	
+	public Long getId() {
+		return id;
+	}	
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public String getMail() {
+		return mail;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	
 }

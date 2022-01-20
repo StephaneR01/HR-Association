@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 import com.openclassrooms.api.model.Employee;
 import com.openclassrooms.api.repository.EmployeeRepository;
 
-import lombok.Data;
+//import lombok.Data;
 
-@Data
+//@Data
 @Service
 public class EmployeeService {
 	
