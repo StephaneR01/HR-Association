@@ -11,9 +11,9 @@ import org.springframework.web.client.RestTemplate;
 import com.openclassrooms.webapp.CustomProperties;
 import com.openclassrooms.webapp.model.Employee;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+//@Slf4j
 @Component
 public class EmployeeProxy {
 
@@ -37,7 +37,7 @@ public class EmployeeProxy {
 				new ParameterizedTypeReference<Iterable<Employee>>() {}
 			);
 		
-		log.debug("Get Employees call " + response.getStatusCode().toString());
+		System.out.println("Get Employees call " + response.getStatusCode().toString());
 		
 		return response.getBody();
 	}
@@ -59,7 +59,7 @@ public class EmployeeProxy {
 				Employee.class
 			);
 		
-		log.debug("Get Employee call " + response.getStatusCode().toString());
+		System.out.println("Get Employee call " + response.getStatusCode().toString());
 		
 		return response.getBody();
 	}
@@ -81,7 +81,7 @@ public class EmployeeProxy {
 				request, 
 				Employee.class);
 		
-		log.debug("Create Employee call " + response.getStatusCode().toString());
+		System.out.println("Create Employee call " + response.getStatusCode().toString());
 		
 		return response.getBody();
 	}
@@ -102,7 +102,7 @@ public class EmployeeProxy {
 				request, 
 				Employee.class);
 		
-		log.debug("Update Employee call " + response.getStatusCode().toString());
+		System.out.println("Update Employee call " + response.getStatusCode().toString());
 		
 		return response.getBody();
 	}
@@ -122,8 +122,7 @@ public class EmployeeProxy {
 				HttpMethod.DELETE, 
 				null, 
 				Void.class);
-		
-		log.debug("Delete Employee call " + response.getStatusCode().toString());
+		System.out.println("Delete Employee call " + response.getStatusCode().toString());
 	}
 
 }

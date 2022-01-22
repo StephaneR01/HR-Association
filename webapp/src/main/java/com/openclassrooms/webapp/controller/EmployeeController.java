@@ -12,9 +12,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.openclassrooms.webapp.model.Employee;
 import com.openclassrooms.webapp.service.EmployeeService;
 
-import lombok.Data;
-
-@Data
 @Controller
 public class EmployeeController {
 
